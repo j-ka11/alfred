@@ -1,6 +1,11 @@
 #pragma once
-class Valuable {
-public:
-	Valuable();
-	virtual ~Valuable() = 0;
-};
+
+namespace Alfred {
+
+	class Valuable {
+	public:
+		Valuable();
+		virtual ~Valuable() = 0;
+	};
+
+}

@@ -1,6 +1,11 @@
 #pragma once
-class Keyable {
-public:
-	Keyable();
-	virtual ~Keyable() = 0;
-};
+
+namespace Alfred {
+
+	class Keyable {
+	public:
+		Keyable();
+		virtual ~Keyable() = 0;
+	};
+
+}
