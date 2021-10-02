@@ -1,7 +1,6 @@
 #pragma once
 class Keyable {
 public:
-	virtual Keyable() = 0;
+	Keyable();
 	virtual ~Keyable() = 0;
 };
-
