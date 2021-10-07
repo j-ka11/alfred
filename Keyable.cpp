@@ -1,5 +1,5 @@
 #include "Keyable.h"
 
-Keyable::Keyable() {}
+Alfred::Keyable::Keyable() {}
 
-Keyable::~Keyable() {}
+Alfred::Keyable::~Keyable() {}

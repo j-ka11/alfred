@@ -1,5 +1,5 @@
 #include "Valuable.h"
 
-Valuable::Valuable() {}
+Alfred::Valuable::Valuable() {}
 
-Valuable::~Valuable() {}
+Alfred::Valuable::~Valuable() {}
