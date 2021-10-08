@@ -2,9 +2,12 @@
 
 using namespace Alfred;
 
+ContainerStation* ContainerStation::me = nullptr;
+
 ContainerStation* ContainerStation::getInstance() {
-	if (me == nullptr) {
+	/*if (me == nullptr) {
 		me = new ContainerStation();
 	}
-	return me;
+	return me;*/
+	return nullptr;
 }
