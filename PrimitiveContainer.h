@@ -15,6 +15,7 @@ namespace Alfred {
 		bool getData(int& data);
 		bool getData(std::string& data);
 	private:
+		bool isANumber;
 		int dataSizeInBytes;
 		void* dataptr;
 	};

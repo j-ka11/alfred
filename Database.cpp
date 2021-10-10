@@ -15,3 +15,10 @@ Database::~Database() {
 bool Database::push(Keyable* key, Valuable* value) {
 	return data->emplace(key, value).second;
 }
+
+Valuable* Database::get(Keyable* key) {
+	if (data->find(key) != data->end()) {
+		return data->at(key);
+	}
+	return nullptr;
+}

@@ -13,6 +13,7 @@ namespace Alfred {
 		~Database();
 
 		static bool push(Keyable* key, Valuable* value);
+		static Valuable* get(Keyable* key);
 	private:
 		static std::unordered_map<Keyable*, Valuable*> *data;
 	};

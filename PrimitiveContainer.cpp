@@ -1,4 +1,5 @@
 #include "PrimitiveContainer.h"
+#include <iostream>
 
 using namespace Alfred;
 
@@ -7,12 +8,14 @@ PrimitiveContainer::PrimitiveContainer() {
 }
 
 PrimitiveContainer::PrimitiveContainer(int data) {
+	this->isANumber = true;
 	this->dataSizeInBytes = sizeof(int);
 	this->dataptr = malloc(this->dataSizeInBytes);
 	*(int*)dataptr = data;
 }
 
 PrimitiveContainer::PrimitiveContainer(std::string data) {
+	this->isANumber = false;
 	this->dataSizeInBytes = data.size();
 	this->dataptr = malloc(this->dataSizeInBytes);
 	char* tempptr = (char*)this->dataptr;
@@ -23,6 +26,9 @@ PrimitiveContainer::PrimitiveContainer(std::string data) {
 }
 
 bool PrimitiveContainer::getData(int& data) {
+	if (!this->isANumber) {
+		return false;
+	}
 	if (this->dataSizeInBytes != sizeof(int)) {
 		return false;
 	}
@@ -32,6 +38,9 @@ bool PrimitiveContainer::getData(int& data) {
 }
 
 bool PrimitiveContainer::getData(std::string& data) {
+	if (this->isANumber) {
+		return false;
+	}
 	if (this->dataSizeInBytes < 1) {
 		return false;
 	}
