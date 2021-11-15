@@ -10,3 +10,8 @@ CMakeFiles/
 Debug/
 sand/
 .vs/
+
+src/CMakeFiles/
+src/alfred.exe
+src/cmake_install.cmake
+src/Makefile
