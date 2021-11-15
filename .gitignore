@@ -1,7 +1,12 @@
-*.sln
-*.vcxproj
 *.filters
+*.sln
 *.user
+*.vcxproj
+cmake_install.cmake
+CMakeCache.txt
+Makefile
 
+CMakeFiles/
 Debug/
+sand/
 .vs/
