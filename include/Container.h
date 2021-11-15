@@ -5,10 +5,10 @@
 
 namespace Alfred {
 
-	class Container: public Keyable, public Valuable {
+	class Container : public Keyable, public Valuable {
 	public:
 		Container();
 		~Container();
-	};
-
+	}
+	
 }
