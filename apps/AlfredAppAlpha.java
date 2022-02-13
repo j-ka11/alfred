@@ -1,5 +1,8 @@
+package alfred.apps;
+
 import java.net.*;
 import java.io.*;
+import alfred.core.runnable.AlfredCoreRunnable;
 
 public class AlfredAppAlpha {
 
@@ -15,7 +18,16 @@ public class AlfredAppAlpha {
             Socket s = new Socket("localhost", 4999);
 
             PrintWriter pr = new PrintWriter(s.getOutputStream());
-            pr.println("hello I am the client");
+            pr.println("alfredApp");
+            pr.flush();
+            pr.println("<a>");
+            pr.flush();
+            pr.println("<aw>");
+            pr.flush();
+            writeWelcomeMessage_(pr);
+            pr.println("</aw>");
+            pr.flush();
+            pr.println("</a>");
             pr.flush();
         } catch (Exception e) {
             e.printStackTrace();
@@ -25,6 +37,13 @@ public class AlfredAppAlpha {
     public static void start() {
         for (int i = 0; i < ALPHA_STRING.length; i++) {
             System.out.println(ALPHA_STRING[i]);
+        }
+    }
+
+    private static void writeWelcomeMessage_(PrintWriter pr) {
+        for (int i = 0; i < ALPHA_STRING.length; i++) {
+            pr.println(ALPHA_STRING[i]);
+            pr.flush();
         }
     }
 }
